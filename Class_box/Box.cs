@@ -2,9 +2,21 @@
 
 class Box
 {
-    double h { get; set; }
-    double w { get; set; }
-    double l { get; set; }
+    public double h
+    {
+        get { return h; }
+        private set { if (value > 0) { h = value; } else { throw new Exception("Height cannot be 0 or less"); } }
+    }
+    public double w
+    {
+        get { return w; }
+        private set { if (value > 0) { w = value; } else { throw new Exception("Width cannot be 0 or less"); } }
+    }
+    public double l
+    {
+        get { return l; }
+        private set { if (value > 0) { l = value; } else { throw new Exception("Height cannot be 0 or less"); } }
+    }
 
     public Box(double h, double w, double l)
     {
